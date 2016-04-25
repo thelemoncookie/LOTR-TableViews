@@ -10,7 +10,18 @@ import Foundation
 import UIKit
 
 class SegueToImageViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+  }
   
+  @IBAction func showActivityVC(sender: AnyObject) {
+    
+    let message = "What are you doing? Just testing this shiz. Sent via my LOTR app."
+    
+    let activityVC = UIActivityViewController(activityItems: [message], applicationActivities: nil)
+    self.presentViewController(activityVC, animated: true, completion: nil)
+    
+  }
   
   
   

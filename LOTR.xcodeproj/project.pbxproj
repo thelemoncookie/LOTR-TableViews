@@ -58,7 +58,7 @@
 		D29533A91CCDB52500A5D9A1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D29533AB1CCDB71D00A5D9A1 /* ThirdView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		D29533AF1CCDCF7800A5D9A1 /* SegueToImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueToImageViewController.swift; sourceTree = "<group>"; };
-		D29533ED1CCDDCC100A5D9A1 /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningViewController.swift; sourceTree = "<group>"; };
+		D29533ED1CCDDCC100A5D9A1 /* OpeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpeningViewController.swift; path = ../OpeningViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 		D26AC0C01CCC6C0E0041CC09 = {
 			isa = PBXGroup;
 			children = (
-				D29533ED1CCDDCC100A5D9A1 /* OpeningViewController.swift */,
 				D26AC0CB1CCC6C0E0041CC09 /* TestingTableView40 */,
 				D26AC0E01CCC6C0E0041CC09 /* TestingTableView40Tests */,
 				D26AC0EB1CCC6C0E0041CC09 /* TestingTableView40UITests */,
@@ -110,6 +109,7 @@
 		D26AC0CB1CCC6C0E0041CC09 /* TestingTableView40 */ = {
 			isa = PBXGroup;
 			children = (
+				D29533ED1CCDDCC100A5D9A1 /* OpeningViewController.swift */,
 				D26AC0CC1CCC6C0E0041CC09 /* AppDelegate.swift */,
 				D26AC0CE1CCC6C0E0041CC09 /* FirstTableViewController.swift */,
 				D29533AB1CCDB71D00A5D9A1 /* ThirdView.swift */,

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Segue To Image View Controller-->
@@ -17,30 +18,182 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Movies__037523_" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-Dy-4z5">
-                                <rect key="frame" x="180" y="159" width="240" height="128"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="80" y="97" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lotr border" translatesAutoresizingMaskIntoConstraints="NO" id="yH0-X9-qFC">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="293" id="A4R-CK-74t"/>
+                                    <constraint firstAttribute="width" constant="245" id="F3k-Iv-t9c"/>
+                                    <constraint firstAttribute="height" constant="293" id="OAd-gE-rag"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="qB7-St-LSC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="A4R-CK-74t"/>
+                                        <exclude reference="F3k-Iv-t9c"/>
+                                        <exclude reference="OAd-gE-rag"/>
+                                        <exclude reference="qB7-St-LSC"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="A4R-CK-74t"/>
+                                        <include reference="F3k-Iv-t9c"/>
+                                        <include reference="OAd-gE-rag"/>
+                                        <include reference="qB7-St-LSC"/>
+                                    </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJN-P8-oIM">
-                                <rect key="frame" x="247" y="428" width="54" height="30"/>
-                                <state key="normal" title="Dismiss"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="173" y="371" width="54" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tolkein" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-Dy-4z5">
+                                <rect key="frame" x="180" y="159" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="221" id="3bp-Vb-jTt"/>
+                                    <constraint firstAttribute="width" constant="257" id="U9s-0t-T2d"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3bp-Vb-jTt"/>
+                                        <exclude reference="U9s-0t-T2d"/>
+                                    </mask>
                                 </variation>
-                                <connections>
-                                    <segue destination="bqq-jy-g7R" kind="unwind" unwindAction="myUnwindAction:" id="cnS-4K-lXw"/>
-                                </connections>
-                            </button>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3bp-Vb-jTt"/>
+                                        <include reference="U9s-0t-T2d"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2D-UL-PGq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Item" style="plain" id="Afz-C6-DRo">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KJN-P8-oIM">
+                                            <rect key="frame" x="247" y="428" width="54" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Back"/>
+                                            <connections>
+                                                <segue destination="bqq-jy-g7R" kind="unwind" unwindAction="myUnwindAction:" id="cnS-4K-lXw"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="5Wd-y8-eFF"/>
+                                    <barButtonItem systemItem="action" id="pig-gB-DOv">
+                                        <connections>
+                                            <action selector="showActivityVC:" destination="0AG-Pc-fdr" id="eCL-J0-kyw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J.R.R. Tolkien" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwz-rI-5ds">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4wy-PD-QMN"/>
+                                    <constraint firstAttribute="width" constant="103" id="Fbc-5e-Xey"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="4wy-PD-QMN"/>
+                                        <exclude reference="Fbc-5e-Xey"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="4wy-PD-QMN"/>
+                                        <include reference="Fbc-5e-Xey"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Dg-sf-eyL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="297" id="XTm-cn-ANj"/>
+                                    <constraint firstAttribute="height" constant="183" id="mws-wR-eUo"/>
+                                </constraints>
+                                <string key="text">Born on January 3, 1892, in Bloemfontein, South Africa, J.R.R. Tolkien settled in England as a child, going on to study at Exeter College. While teaching at Oxford University, he published the popular fantasy novels The Hobbit and the Lord of the Rings trilogy. The works have had a devoted international fan base and been adapted into award-winning blockbuster films. Tolkien died in 1973 at 81.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XTm-cn-ANj"/>
+                                        <exclude reference="mws-wR-eUo"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XTm-cn-ANj"/>
+                                        <include reference="mws-wR-eUo"/>
+                                    </mask>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f2D-UL-PGq" firstAttribute="centerX" secondItem="9lC-KS-Sb9" secondAttribute="centerX" id="4BI-ma-bjp"/>
+                            <constraint firstItem="yH0-X9-qFC" firstAttribute="centerX" secondItem="9lC-KS-Sb9" secondAttribute="centerX" id="UjT-jD-l1e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="f2D-UL-PGq" secondAttribute="trailing" constant="-20" id="V3d-Ix-DlW"/>
+                            <constraint firstItem="f2D-UL-PGq" firstAttribute="leading" secondItem="9lC-KS-Sb9" secondAttribute="leadingMargin" constant="-20" id="VF0-bK-7Ks"/>
+                            <constraint firstItem="gwz-rI-5ds" firstAttribute="centerX" secondItem="9lC-KS-Sb9" secondAttribute="centerX" id="WEP-P3-bib"/>
+                            <constraint firstItem="5Tb-Dy-4z5" firstAttribute="centerX" secondItem="9lC-KS-Sb9" secondAttribute="centerX" id="YB0-iZ-VCH"/>
+                            <constraint firstItem="yH0-X9-qFC" firstAttribute="top" secondItem="fxf-za-DJ2" secondAttribute="bottom" id="bFm-GM-qKz"/>
+                            <constraint firstItem="7Dg-sf-eyL" firstAttribute="top" secondItem="yH0-X9-qFC" secondAttribute="bottom" constant="27" id="jSC-H2-zqG"/>
+                            <constraint firstItem="vMI-fX-3E2" firstAttribute="top" secondItem="f2D-UL-PGq" secondAttribute="bottom" id="n6o-GP-sxU"/>
+                            <constraint firstItem="5Tb-Dy-4z5" firstAttribute="top" secondItem="fxf-za-DJ2" secondAttribute="bottom" constant="36" id="rkW-vh-C6L"/>
+                            <constraint firstItem="gwz-rI-5ds" firstAttribute="top" secondItem="yH0-X9-qFC" secondAttribute="bottom" constant="8" id="s8W-c7-AWt"/>
+                            <constraint firstItem="7Dg-sf-eyL" firstAttribute="centerX" secondItem="9lC-KS-Sb9" secondAttribute="centerX" id="wb3-fN-smx"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="yH0-X9-qFC"/>
+                                <exclude reference="f2D-UL-PGq"/>
+                                <exclude reference="gwz-rI-5ds"/>
+                                <exclude reference="7Dg-sf-eyL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="UjT-jD-l1e"/>
+                                <exclude reference="bFm-GM-qKz"/>
+                                <exclude reference="YB0-iZ-VCH"/>
+                                <exclude reference="rkW-vh-C6L"/>
+                                <exclude reference="jSC-H2-zqG"/>
+                                <exclude reference="wb3-fN-smx"/>
+                                <exclude reference="WEP-P3-bib"/>
+                                <exclude reference="s8W-c7-AWt"/>
+                                <exclude reference="4BI-ma-bjp"/>
+                                <exclude reference="V3d-Ix-DlW"/>
+                                <exclude reference="VF0-bK-7Ks"/>
+                                <exclude reference="n6o-GP-sxU"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="yH0-X9-qFC"/>
+                                <include reference="f2D-UL-PGq"/>
+                                <include reference="gwz-rI-5ds"/>
+                                <include reference="7Dg-sf-eyL"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="UjT-jD-l1e"/>
+                                <include reference="bFm-GM-qKz"/>
+                                <include reference="YB0-iZ-VCH"/>
+                                <include reference="rkW-vh-C6L"/>
+                                <include reference="jSC-H2-zqG"/>
+                                <include reference="wb3-fN-smx"/>
+                                <include reference="WEP-P3-bib"/>
+                                <include reference="s8W-c7-AWt"/>
+                                <include reference="4BI-ma-bjp"/>
+                                <include reference="V3d-Ix-DlW"/>
+                                <include reference="VF0-bK-7Ks"/>
+                                <include reference="n6o-GP-sxU"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HRj-uO-LfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="bqq-jy-g7R" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="418.5" y="-281"/>
+            <point key="canvasLocation" x="418.5" y="-275"/>
         </scene>
         <!--The Fellowship of the Ring-->
         <scene sceneID="s0N-I1-1Fv">
@@ -148,20 +301,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Movies__037523_" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-5z-JJL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LOTR animated" translatesAutoresizingMaskIntoConstraints="NO" id="fzv-5z-JJL">
                                 <rect key="frame" x="177" y="85" width="246" height="184"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="246" id="0Ga-PM-Zz5"/>
-                                    <constraint firstAttribute="height" constant="184" id="eQK-dF-Hv0"/>
+                                    <constraint firstAttribute="width" constant="246" id="0Ga-PM-Zz5">
+                                        <variation key="widthClass=compact" constant="278"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" constant="184" id="eQK-dF-Hv0">
+                                        <variation key="widthClass=compact" constant="219"/>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="75i-Rv-uMR" firstAttribute="centerX" secondItem="K2Z-Vs-DwE" secondAttribute="centerX" id="jEJ-sR-OMJ"/>
-                            <constraint firstItem="75i-Rv-uMR" firstAttribute="top" secondItem="fzv-5z-JJL" secondAttribute="bottom" constant="36" id="nRc-WT-kKJ"/>
+                            <constraint firstItem="75i-Rv-uMR" firstAttribute="top" secondItem="fzv-5z-JJL" secondAttribute="bottom" constant="36" id="nRc-WT-kKJ">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="fzv-5z-JJL" firstAttribute="centerX" secondItem="K2Z-Vs-DwE" secondAttribute="centerX" id="sA5-wi-iVA"/>
-                            <constraint firstItem="fzv-5z-JJL" firstAttribute="top" secondItem="dIS-gT-ulv" secondAttribute="bottom" constant="21" id="uZ4-w2-kQv"/>
+                            <constraint firstItem="fzv-5z-JJL" firstAttribute="top" secondItem="dIS-gT-ulv" secondAttribute="bottom" constant="21" id="uZ4-w2-kQv">
+                                <variation key="widthClass=compact" constant="14"/>
+                            </constraint>
                         </constraints>
                     </view>
                     <connections>
@@ -170,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCr-te-7U2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="551"/>
+            <point key="canvasLocation" x="1017" y="551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qEb-pl-ah9">
@@ -200,9 +361,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope you're a fan of Tolkien as much as I am. Or rather, a fan of Lord of the Rings.  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N7j-9c-9wB">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="I hope you're a fan of Tolkien as much as I am. Or rather, a fan of Lord of the Rings.  " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N7j-9c-9wB">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="216" id="3xi-9G-3Kq"/>
@@ -269,7 +430,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N7j-9c-9wB" firstAttribute="top" secondItem="anm-Tt-3B5" secondAttribute="bottom" constant="58" id="3ll-qT-URK"/>
                             <constraint firstItem="vR8-xb-pht" firstAttribute="centerX" secondItem="0ZK-ZO-GWE" secondAttribute="centerX" id="E61-Sj-z8j"/>
@@ -324,7 +485,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Movies__037523_" width="1920" height="1080"/>
+        <image name="LOTR animated" width="1000" height="745"/>
         <image name="eye and ring friends" width="1920" height="1080"/>
+        <image name="lotr border" width="736" height="1171"/>
+        <image name="tolkein" width="533" height="755"/>
     </resources>
 </document>

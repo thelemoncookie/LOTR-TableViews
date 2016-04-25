@@ -11,12 +11,6 @@ import UIKit
 class FirstTableViewController: UITableViewController {
 
   
-  
-  
-  
-  
-  
-  
   var FellowshipOfTheRing = [String]()
   
   var MiddleEarthArray = [MiddleEarthTable]()
