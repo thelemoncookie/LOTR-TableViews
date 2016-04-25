@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BWR-v1-77X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BT2-yt-OrN">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Segue To Image View Controller-->
+        <scene sceneID="Tri-gm-gmI">
+            <objects>
+                <viewController id="0AG-Pc-fdr" customClass="SegueToImageViewController" customModule="LOTR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fxf-za-DJ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="vMI-fX-3E2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9lC-KS-Sb9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Movies__037523_" translatesAutoresizingMaskIntoConstraints="NO" id="5Tb-Dy-4z5">
+                                <rect key="frame" x="180" y="159" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="97" width="240" height="128"/>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJN-P8-oIM">
+                                <rect key="frame" x="247" y="428" width="54" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="173" y="371" width="54" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="bqq-jy-g7R" kind="unwind" unwindAction="myUnwindAction:" id="cnS-4K-lXw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HRj-uO-LfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bqq-jy-g7R" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="418.5" y="-281"/>
+        </scene>
         <!--The Fellowship of the Ring-->
         <scene sceneID="s0N-I1-1Fv">
             <objects>
@@ -40,11 +77,13 @@
                             <outlet property="delegate" destination="pnH-2d-X26" id="ptj-M3-LOf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="The Fellowship of the Ring" id="4QQ-qX-iWO"/>
+                    <navigationItem key="navigationItem" title="The Fellowship of the Ring" id="4QQ-qX-iWO">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="QlX-wN-a7r"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhT-20-GKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="623" y="333"/>
+            <point key="canvasLocation" x="-501" y="519"/>
         </scene>
         <!--Second Table View Controller-->
         <scene sceneID="t1O-Cx-5Pp">
@@ -84,7 +123,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zX0-Lu-2cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1370" y="333"/>
+            <point key="canvasLocation" x="284" y="527"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BR0-cU-uT2">
@@ -131,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCr-te-7U2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2364" y="333"/>
+            <point key="canvasLocation" x="1018" y="551"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qEb-pl-ah9">
@@ -147,10 +186,145 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcM-eB-jpS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197" y="333"/>
+            <point key="canvasLocation" x="-345" y="-295"/>
+        </scene>
+        <!--Opening View Controller-->
+        <scene sceneID="VHl-dM-WWT">
+            <objects>
+                <viewController id="BT2-yt-OrN" customClass="OpeningViewController" customModule="LOTR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="anm-Tt-3B5"/>
+                        <viewControllerLayoutGuide type="bottom" id="T6w-yY-igH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ZK-ZO-GWE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I hope you're a fan of Tolkien as much as I am. Or rather, a fan of Lord of the Rings.  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N7j-9c-9wB">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="216" id="3xi-9G-3Kq"/>
+                                    <constraint firstAttribute="height" constant="116" id="9pO-BG-Oxk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3xi-9G-3Kq"/>
+                                        <exclude reference="9pO-BG-Oxk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3xi-9G-3Kq"/>
+                                        <include reference="9pO-BG-Oxk"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4ik-pb-pCe" appends="YES" id="ebd-at-ysL"/>
+                                </connections>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye and ring friends" translatesAutoresizingMaskIntoConstraints="NO" id="Gum-PA-LbT">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="247" id="750-An-2hK"/>
+                                    <constraint firstAttribute="width" constant="266" id="Rfh-pL-Qv3"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="750-An-2hK"/>
+                                        <exclude reference="Rfh-pL-Qv3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="750-An-2hK"/>
+                                        <include reference="Rfh-pL-Qv3"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR8-xb-pht">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CJw-Xj-SFu"/>
+                                    <constraint firstAttribute="width" constant="181" id="u3F-AH-xzx"/>
+                                </constraints>
+                                <state key="normal" title="The Fellowship of the Ring"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CJw-Xj-SFu"/>
+                                        <exclude reference="u3F-AH-xzx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="CJw-Xj-SFu"/>
+                                        <include reference="u3F-AH-xzx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="BWR-v1-77X" kind="presentation" id="T2M-Yx-8OF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="N7j-9c-9wB" firstAttribute="top" secondItem="anm-Tt-3B5" secondAttribute="bottom" constant="58" id="3ll-qT-URK"/>
+                            <constraint firstItem="vR8-xb-pht" firstAttribute="centerX" secondItem="0ZK-ZO-GWE" secondAttribute="centerX" id="E61-Sj-z8j"/>
+                            <constraint firstItem="T6w-yY-igH" firstAttribute="top" secondItem="vR8-xb-pht" secondAttribute="bottom" constant="107" id="Ir3-qd-TWN"/>
+                            <constraint firstItem="N7j-9c-9wB" firstAttribute="centerX" secondItem="0ZK-ZO-GWE" secondAttribute="centerX" id="Qzz-V8-Jsi"/>
+                            <constraint firstItem="Gum-PA-LbT" firstAttribute="centerX" secondItem="0ZK-ZO-GWE" secondAttribute="centerX" id="bR4-Ln-AqL"/>
+                            <constraint firstItem="Gum-PA-LbT" firstAttribute="top" secondItem="anm-Tt-3B5" secondAttribute="bottom" constant="128" id="jsz-ok-dFj">
+                                <variation key="widthClass=compact" constant="108"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="N7j-9c-9wB"/>
+                                <exclude reference="Gum-PA-LbT"/>
+                                <exclude reference="vR8-xb-pht"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3ll-qT-URK"/>
+                                <exclude reference="Qzz-V8-Jsi"/>
+                                <exclude reference="bR4-Ln-AqL"/>
+                                <exclude reference="jsz-ok-dFj"/>
+                                <exclude reference="E61-Sj-z8j"/>
+                                <exclude reference="Ir3-qd-TWN"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="N7j-9c-9wB"/>
+                                <include reference="Gum-PA-LbT"/>
+                                <include reference="vR8-xb-pht"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3ll-qT-URK"/>
+                                <include reference="Qzz-V8-Jsi"/>
+                                <include reference="bR4-Ln-AqL"/>
+                                <include reference="jsz-ok-dFj"/>
+                                <include reference="E61-Sj-z8j"/>
+                                <include reference="Ir3-qd-TWN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bka-03-1xU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="4ik-pb-pCe">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BT2-yt-OrN" id="U1k-ny-QgC"/>
+                        <segue destination="0AG-Pc-fdr" kind="presentation" identifier="segueToImage" id="gix-mR-tcF"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="69" y="-1049"/>
         </scene>
     </scenes>
     <resources>
         <image name="Movies__037523_" width="1920" height="1080"/>
+        <image name="eye and ring friends" width="1920" height="1080"/>
     </resources>
 </document>

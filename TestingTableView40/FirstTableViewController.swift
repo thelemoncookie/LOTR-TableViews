@@ -9,6 +9,14 @@
 import UIKit
 
 class FirstTableViewController: UITableViewController {
+
+  
+  
+  
+  
+  
+  
+  
   var FellowshipOfTheRing = [String]()
   
   var MiddleEarthArray = [MiddleEarthTable]()
@@ -21,7 +29,7 @@ class FirstTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    FellowshipOfTheRing = ["Hobbits", "Humans", "Elves", "Dwarves", "Wizzards"]
+    FellowshipOfTheRing = ["Hobbits", "Humans", "Elves", "Dwarves", "Wizards"]
     
     
     MiddleEarthArray = [
